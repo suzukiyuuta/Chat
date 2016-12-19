@@ -1,0 +1,25 @@
+2016/12/19 Chat課題
+テーブル　ユーザー情報を取得
+create database chat;
+
+use chat;
+
+create table chat(
+    -> id int NOT NULL PRIMARY KEY,
+    -> loginid varchar(32),
+    -> password varchar(16),
+    -> dispname varchar(32),
+    -> del_flag bool,
+    -> lastlogin_date datetime);
+
+mysql> INSERT INTO chat(id, loginid, password, dispname, del_flag, lastlogin_date)
+    -> values(1, 'tom', 'nosushinolife', 'GOD', false, '2016-12-19 10:00:00'); 
+Query OK, 1 row affected (0.05 sec)
+
+mysql> INSERT INTO chat(id, loginid, password, dispname, del_flag, lastlogin_date)
+    -> values(2, 'mike', 'apple2016', 'Taro', false, '2016-12-19 10:05:00');Query OK, 1 row affected (0.03 sec)
+
+mysql> INSERT INTO chat(id, loginid, password, dispname, del_flag, lastlogin_date)
+    -> values(3, 'mary', 'c@ndyclash', 'Yoko', false, '2016-12-19 10:10:00');
+Query OK, 1 row affected (0.00 sec)
+
